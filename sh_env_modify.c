@@ -7,7 +7,7 @@ int main(){
     char *path = getenv("PATH");
     char *new_path;
 
-    new_path = malloc(512);
+    new_path = calloc(512, sizeof(char));
     strcpy(new_path, path_head);
     strcat(new_path, path);
     printf("Current $%s\n", new_path);
